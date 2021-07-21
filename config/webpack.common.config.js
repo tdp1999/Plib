@@ -10,7 +10,6 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve(__dirname, '../dist'),
-		assetModuleFilename: 'images/[hash][ext][query]',
 		// filename: '[name].js',
 	},
 	module: {
@@ -31,7 +30,7 @@ module.exports = {
 					},
 					{
 						loader: 'css-loader',
-						options: {},
+						options: { url: false }, // Ảnh trong url css sẽ giữ nguyên url
 					},
 					{
 						loader: 'postcss-loader',
@@ -44,13 +43,12 @@ module.exports = {
 				],
 			},
 			{
-				test: /.(png|jpg|jpeg|gif|svg)$/i,
+				test: /.(png|jpg|jpeg|svg|gif)$/i,
 				use: [
 					{
-						loader: 'file-loader',
+						loader: 'file-loader', // ảnh được config trong js + css url sẽ được xuất ra
 						options: {
-							name: '[name].[ext]',
-							outputPath: 'images/',
+							name: 'images/[name].[ext]',
 						},
 					},
 				],

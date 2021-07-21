@@ -141,12 +141,4 @@ body {
           justify-content: center;
 }
 
-.hero {
-  background-image: url(images/f576b69731b5cd5ffe88.png);
-  background-size: cover;
-  background-position: center;
-  min-height: 300px;
-  width: 100%;
-}
-
 /*# sourceMappingURL=styles.css.map*/
