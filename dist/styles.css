@@ -1,8 +1,8 @@
-/*!***************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
-  \***************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/style.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
 :root {
-  --mainBg: salmon;
+  --mainColor: red;
 }
 
 *,
@@ -50,6 +50,7 @@ body {
   font-size: 36px;
   width: 36px;
   color: red;
+  color: var(--mainColor);
 }
 
 .search-bar__input {
@@ -125,6 +126,27 @@ body {
 
 .search-bar__input:not(:placeholder-shown) ~ .times-icon {
   display: block;
+}
+
+.test {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero {
+  background-image: url(images/549b1c7a8c6e0877f5e7.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map*/

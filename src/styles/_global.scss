@@ -1,8 +1,4 @@
-:root {
-	--mainBg: salmon;
-}
-
-$light-text: grey;
+@use 'variables';
 
 *,
 *::before,
@@ -32,7 +28,7 @@ body {
 	padding: 20px 0;
 
 	/* Styling */
-	background-color: $light-text;
+	background-color: variables.$light-text;
 }
 
 .search-bar {
@@ -50,7 +46,7 @@ body {
 	/* Styling */
 	font-size: 36px;
 	width: 36px;
-	color: red;
+	color: var(--mainColor);
 }
 
 .search-bar__input {
@@ -87,4 +83,10 @@ body {
 
 .search-bar__input:not(:placeholder-shown) ~ .times-icon {
 	display: block;
+}
+
+.test {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
