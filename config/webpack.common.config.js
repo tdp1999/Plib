@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -12,6 +13,9 @@ module.exports = {
 		path: path.resolve(__dirname, '../dist'),
 		// filename: '[name].js',
 	},
+	devServer: {
+		contentBase: 'dist',
+	},
 	module: {
 		rules: [
 			{
@@ -22,7 +26,7 @@ module.exports = {
 				},
 			},
 			{
-				test: /.(css|scss)$/,
+				test: /\.(css|scss)$/,
 				use: [
 					{
 						loader: MiniCssExtractPlugin.loader,
@@ -42,17 +46,20 @@ module.exports = {
 					},
 				],
 			},
-			{
-				test: /.(png|jpg|jpeg|svg|gif)$/i,
-				use: [
-					{
-						loader: 'file-loader', // ảnh được config trong js + css url sẽ được xuất ra
-						options: {
-							name: 'images/[name].[ext]',
-						},
-					},
-				],
-			},
+			// {
+			// 	test: /\.(png|jpg|jpeg|svg|gif)$/i, // Chỉ load ảnh trong file js, khá vô ích
+			// 	exclude: /fonts/,
+			// 	use: [
+			// 		{
+			// 			loader: 'file-loader',
+			// 			options: {
+			// 				name: '[name].[ext]',
+			// 				outputPath: 'images/',
+			// 			},
+			// 		},
+			// 		{},
+			// 	],
+			// },
 		],
 	},
 	plugins: [
@@ -66,6 +73,12 @@ module.exports = {
 				removeComments: true,
 				collapseWhitespace: true,
 			},
+		}),
+		new CopyWebpackPlugin({
+			patterns: [
+				{ from: './src/fonts', to: 'fonts' },
+				{ from: './src/images', to: 'images' }, // Copy all image to dist, no loader
+			],
 		}),
 	],
 };
