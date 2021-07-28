@@ -1,0 +1,103 @@
+@import 'functions';
+
+/**************************/
+/****** Color system ******/
+/**************************/
+
+// Primary
+$red: #ed1b2e !default;
+$black: #000000 !default;
+$white: #ffffff !default;
+$gray: #68737a !default;
+$gray-light: #f7f7f7 !default;
+$gray-medium: #eeeeee !default;
+$gray-dark: #d8d8d8 !default;
+$blue-gray: #e5eaef !default;
+$blue-dark: #1b365d !default;
+
+$primary-colors: () !default;
+$primary-colors: map-merge(
+	(
+		'red': $red,
+		'black': $black,
+		'white': $white,
+		'gray': $gray,
+		'gray-light': $gray-light,
+		'gray-medium': $gray-medium,
+		'gray-dark': $gray-dark,
+		'blue-gray': $blue-gray,
+		'blue-dark': $blue-dark,
+	),
+	$primary-colors
+);
+
+// Secondary
+$peach: #f09491 !default;
+$pink: #ffded9 !default;
+$teal: #32bfb9 !default;
+$red-dim: #de303a !default;
+$blue-soft: #2a5581 !default;
+$violet: #dad5ec !default;
+$violet-light: #fbfafd !default;
+
+$secondary-colors: () !default;
+$secondary-colors: map-merge(
+	(
+		'peach': $peach,
+		'pink': $pink,
+		'teal': $teal,
+		'red-dim': $red-dim,
+		'blue-soft': $blue-soft,
+		'violet': $violet,
+		'violet-light': $violet-light,
+	),
+	$secondary-colors
+);
+
+// Shade
+$black-10: rgba($black, 0.1) !default;
+$black-20: rgba($black, 0.2) !default;
+$black-40: rgba($black, 0.4) !default;
+$black-60: rgba($black, 0.6) !default;
+
+$blacks: () !default;
+$blacks: map-merge(
+	(
+		'10': $black-10,
+		'20': $black-20,
+		'40': $black-40,
+		'60': $black-60,
+	),
+	$blacks
+);
+
+$white-20: rgba($white, 0.2);
+$white-40: rgba($white, 0.4);
+$white-60: rgba($white, 0.6);
+
+$whites: () !default;
+$whites: map-merge(
+	(
+		'20': $white-20,
+		'40': $white-40,
+		'60': $white-60,
+	),
+	$whites
+);
+
+// Other
+$disabled-bg: #dddddd;
+$disabled-text: #999999;
+
+$other-colors: () !default;
+$other-colors: map-merge(
+	(
+		'disabled-bg': $disabled-bg,
+		'disabled-text': $disabled-text,
+	),
+	$other-colors
+);
+
+// Final colors array
+$colors: () !default;
+$colors: map-collect($primary-colors, $secondary-colors, $blacks, $whites, $other-colors);

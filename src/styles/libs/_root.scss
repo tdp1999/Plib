@@ -1,0 +1,9 @@
+@mixin color-variables($color-configs: $colors) {
+	@each $color-name, $color-hex in $colors {
+		--color-#{$color-name}: #{$color-hex};
+	}
+}
+
+:root {
+	@include color-variables();
+}

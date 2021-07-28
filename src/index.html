@@ -4,38 +4,44 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+		<link rel="shortcut icon" href="images/icon/point-icon.png" type="image/x-icon" />
 		<title>PLib</title>
+		<style>
+			body {
+				display: grid;
+				grid-template-columns: 20vw auto;
+			}
+
+			.navbar {
+				position: fixed;
+				width: 20vw;
+				height: 100vw;
+				background-color: wheat;
+			}
+			.demo-container {
+				grid-column-start: 2;
+			}
+
+			.demo-container ul {
+				list-style: none;
+			}
+		</style>
 	</head>
 	<body>
-		<section>
-			<form action="">
-				<div class="container">
-					<div class="search-bar">
-						<input class="search-bar__input" type="text" placeholder="Search Prudential" />
-						<i class="fa fa-search icon search-icon"></i>
-						<i class="fas fa-times icon times-icon"></i>
-					</div>
-					<div class="divider">Divider</div>
-					<div class="search-suggest">
-						<ul>
-							<li>Some suggesting idea</li>
-							<li>Some suggesting idea</li>
-							<li>Some suggesting idea</li>
-							<li>Some suggesting idea</li>
-							<li>Some suggesting idessssa</li>
-							<div class="divider">Divider</div>
-							See search result only in mobile!
-						</ul>
-					</div>
-				</div>
-			</form>
-		</section>
+		<div class="navbar" id="navbar">
+			<button id="closeNav">Close this shit</button>
+		</div>
+		<div class="demo-container" id="demo-container">Nothing here</div>
 
-		<section>
-			<div class="hero" id="hero">herosss</div>
-			<div><i class="icon-home"></i></div>
-			<img src="images/icon/icon-check-box-button-selected.svg" alt="" />
-		</section>
+		<script>
+			const closeNav = document.querySelector('#closeNav');
+			const navBar = document.querySelector('#navbar');
+			const demoCon = document.querySelector('.demo-container');
+			closeNav.addEventListener('click', () => {
+				navBar.style.display = 'none';
+				demoCon.style.gridColumnStart = '1';
+				demoCon.style.gridColumnEnd = '3';
+			});
+		</script>
 	</body>
 </html>

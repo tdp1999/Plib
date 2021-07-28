@@ -1,3 +1,7 @@
-@use "icons/index";
-@use "global";
-@use "hero";
+@import 'libs/variables';
+@import 'libs/functions';
+@import 'libs/root';
+
+@import 'icons/index';
+@import 'global';
+@import 'hero';

@@ -7,15 +7,20 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
 	entry: {
 		index: './src/index.js',
+		demo: './src/scripts/index.js',
 		styles: './src/styles/style.scss',
 	},
 	output: {
 		path: path.resolve(__dirname, '../dist'),
 		// filename: '[name].js',
 	},
-	devServer: {
-		contentBase: 'dist',
-	},
+	// devServer: {
+	// 	contentBase: './dist',
+	// 	hot: true,
+	// 	watchOptions: {
+	// 		poll: true,
+	// 	},
+	// },
 	module: {
 		rules: [
 			{
@@ -46,29 +51,14 @@ module.exports = {
 					},
 				],
 			},
-			// {
-			// 	test: /\.(png|jpg|jpeg|svg|gif)$/i, // Chỉ load ảnh trong file js, khá vô ích
-			// 	exclude: /fonts/,
-			// 	use: [
-			// 		{
-			// 			loader: 'file-loader',
-			// 			options: {
-			// 				name: '[name].[ext]',
-			// 				outputPath: 'images/',
-			// 			},
-			// 		},
-			// 		{},
-			// 	],
-			// },
 		],
 	},
 	plugins: [
-		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin(),
 		new HtmlWebpackPlugin({
 			template: './src/index.html',
 			title: 'Plib',
-			// inject: true,
+			inject: true,
 			minify: {
 				removeComments: true,
 				collapseWhitespace: true,
@@ -80,5 +70,6 @@ module.exports = {
 				{ from: './src/images', to: 'images' }, // Copy all image to dist, no loader
 			],
 		}),
+		new CleanWebpackPlugin(),
 	],
 };
