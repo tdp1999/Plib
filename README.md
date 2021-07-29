@@ -6,9 +6,12 @@ Phuong's Library
 
 https://plib.netlify.app/
 
+## On doing:
+- From _reboot, _variables ref, add plib _reboot, _variables
+- Implement typography, mixin for header and body 
+
 ## Add / Change things in bootstrap var
 
-- Color System
 - Spacer
 - Body, link config
 - Grid

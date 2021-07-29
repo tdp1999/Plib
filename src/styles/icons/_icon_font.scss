@@ -8,5 +8,5 @@
 		url('fonts/icon/icomoon.svg?ye371t#icomoon') format('svg'); /* Legacy iOS */
 	font-weight: normal;
 	font-style: normal;
-	font-display: block;
+	font-display: block; /* It's display nothing until this font is loaded  */
 }
