@@ -63,10 +63,10 @@ $black-60: rgba($black, 0.6) !default;
 $blacks: () !default;
 $blacks: map-merge(
 	(
-		'10': $black-10,
-		'20': $black-20,
-		'40': $black-40,
-		'60': $black-60,
+		'black-10': $black-10,
+		'black-20': $black-20,
+		'black-40': $black-40,
+		'black-60': $black-60,
 	),
 	$blacks
 );
@@ -78,9 +78,9 @@ $white-60: rgba($white, 0.6);
 $whites: () !default;
 $whites: map-merge(
 	(
-		'20': $white-20,
-		'40': $white-40,
-		'60': $white-60,
+		'white-20': $white-20,
+		'white-40': $white-40,
+		'white-60': $white-60,
 	),
 	$whites
 );

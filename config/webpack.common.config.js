@@ -14,13 +14,9 @@ module.exports = {
 		path: path.resolve(__dirname, '../dist'),
 		// filename: '[name].js',
 	},
-	// devServer: {
-	// 	contentBase: './dist',
-	// 	hot: true,
-	// 	watchOptions: {
-	// 		poll: true,
-	// 	},
-	// },
+	devServer: {
+		contentBase: 'dist',
+	},
 	module: {
 		rules: [
 			{

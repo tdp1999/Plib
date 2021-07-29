@@ -1,3 +1,4 @@
+// Map more than 2 collection
 @function map-collect($maps...) {
 	$collection: ();
 
@@ -6,3 +7,4 @@
 	}
 	@return $collection;
 }
+
