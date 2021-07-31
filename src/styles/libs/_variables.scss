@@ -132,6 +132,13 @@ $enable-important-utilities:  true !default;
 
 
 /**************************/
+/******** Paragraphs ******/
+/**************************/
+// Style p element.
+
+$paragraph-margin-bottom:   1rem !default;
+
+/**************************/
 /******* Typography *******/
 /**************************/
 // scss-docs-start font-variables
@@ -153,7 +160,7 @@ $font-size-lg:                16px !default;
 $plib-font-weight: (
 	"light": 300,
 	"regular": 400,
-	"semibold": 600,
+	"semiBold": 600,
 	"bold": 700,
 );
 
@@ -161,7 +168,7 @@ $font-weight-light:         map-get($plib-font-weight, "light") !default;
 $font-weight-regular:       map-get($plib-font-weight, "regular") !default;
 $font-weight-medium:        map-get($plib-font-weight, "regular") !default;
 $font-weight-normal:        map-get($plib-font-weight, "regular") !default;
-$font-weight-semiBold:      map-get($plib-font-weight, "semibold") !default;
+$font-weight-semiBold:      map-get($plib-font-weight, "semiBold") !default;
 $font-weight-bold:          map-get($plib-font-weight, "bold") !default;
 
 $font-weight-base:            $font-weight-normal !default;

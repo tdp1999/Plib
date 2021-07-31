@@ -4,6 +4,13 @@
 	}
 }
 
+@mixin font-weight-variable($font-weight-config: $plib-font-weight){
+	@each $name, $value in $plib-font-weight {
+		--font-weight-#{$name}: #{$value};
+	}
+}
+
 :root {
 	@include color-variables();
+	@include font-weight-variable();
 }
