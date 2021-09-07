@@ -1,0 +1,74 @@
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+@if $enable-grid-classes {
+  // Single container class with breakpoint max-widths
+  .container,
+
+    // 100% wide container at all breakpoints
+  .container-fluid {
+    @include make-container();
+  }
+
+  // Responsive containers that are 100% wide until a breakpoint (.container max-width included)
+  @each $breakpoint, $container-max-width in $container-max-widths {
+
+    // Container at breakpoint
+    .container-#{$breakpoint} {
+      @extend .container-fluid;
+    }
+    // MyNote: Should be .container#{breakpoint-infix($name, $grid-breakpoints)}
+
+
+    // Exclude xs from having media query
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+
+      // Set max-width placeholder for setting below
+      %responsive-container-#{$breakpoint} {
+        max-width: $container-max-width;
+      }
+
+      // Tieng Viet ne: .container-sm se ke thua max width cua md, lg, xl, xxl.
+      $extend-breakpoint: true;
+
+      @each $name, $width in $grid-breakpoints {
+        @if ($extend-breakpoint) {
+          .container#{ breakpoint-infix($name, $grid-breakpoints) } {
+            @extend %responsive-container-#{$breakpoint};
+          }
+
+          // Once the current breakpoint is reached, stop extending
+          @if ($breakpoint == $name) {
+            $extend-breakpoint: false;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@if $enable-grid-classes {
+  @include make-grid-columns();
+}
+
+
+// No gutters
+@if $enable-grid-classes {
+  // Remove the negative margin from default .row, then the horizontal padding
+  // from all immediate children columns (to prevent runaway style inheritance).
+  .no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}

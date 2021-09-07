@@ -1,0 +1,9 @@
+@each $name, $value in $colors {
+  .text--#{$name}{
+    color: $value;
+  }
+}
+
+.text--disabled {
+  color: $disabled-text;
+}

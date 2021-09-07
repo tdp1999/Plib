@@ -2,8 +2,15 @@
 @import 'libs/functions';
 @import 'libs/root';
 @import 'libs/reboot';
+@import 'libs/bootstrap-dep';
 
-@import "typos/index";
+@import 'grid/grid-system';
+@import 'grid/grid';
+
 @import 'icons/index';
+@import "typos/index";
 
+@import 'box-shadow';
 @import 'hero';
+@import 'pagination';
+@import 'loader';

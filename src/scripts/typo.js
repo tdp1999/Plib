@@ -2,41 +2,42 @@ export default function () {
     const container = document.getElementById('demo-container');
     if (!container) return;
 
-    const demoColor = document.createElement('div');
+    const demoTypo = document.createElement('div');
 
     let innerHTML = ``;
 
     innerHTML += `
       <div>
-		<h2 class="demo-secondary-header font-weight-bold">Headline display</h2>
+       
+		<h2 class="demo-secondary-header text--bold">Headline display</h2>
 		<div class="demo-typo">
 			<p class="h1-des">ddes/headline/h1-light</p>
 			<p class="h1-mob">dmob/headline/h1-light</p>
-			<p class="h1-des font-weight-bold">ddes/headline/h1-bold</p>
-			<p class="h1-mob font-weight-bold">dmob/headline/h1-bold</p>
+			<p class="h1-des text--bold">ddes/headline/h1-bold</p>
+			<p class="h1-mob text--bold">dmob/headline/h1-bold</p>
 			
             <p class="h2-des">ddes/headline/h2-light</p>
 			<p class="h2-mob">dmob/headline/h2-light</p>
-			<p class="h2-des font-weight-bold">ddes/headline/h2-bold</p>
-			<p class="h2-mob font-weight-bold">dmob/headline/h2-bold</p>
+			<p class="h2-des text--bold">ddes/headline/h2-bold</p>
+			<p class="h2-mob text--bold">dmob/headline/h2-bold</p>
 			
 			<p class="h3-des">ddes/headline/h3-light</p>
 			<p class="h3-mob">dmob/headline/h3-light</p>
-			<p class="h3-des font-weight-bold">ddes/headline/h3-bold</p>
-			<p class="h3-mob font-weight-bold">dmob/headline/h3-bold</p>
+			<p class="h3-des text--bold">ddes/headline/h3-bold</p>
+			<p class="h3-mob text--bold">dmob/headline/h3-bold</p>
 			
 			<p class="h4-des">ddes/headline/h4-light</p>
 			<p class="h4-mob">dmob/headline/h4-light</p>
-			<p class="h4-des font-weight-bold">ddes/headline/h4-bold</p>
-			<p class="h4-mob font-weight-bold">dmob/headline/h4-bold</p>
+			<p class="h4-des text--bold">ddes/headline/h4-bold</p>
+			<p class="h4-mob text--bold">dmob/headline/h4-bold</p>
 			
 			<p class="h5-des">ddes/headline/h5-light</p>
 			<p class="h5-mob">dmob/headline/h5-light</p>
-			<p class="h5-des font-weight-bold">ddes/headline/h5-bold</p>
-			<p class="h5-mob font-weight-bold">dmob/headline/h5-bold</p>
+			<p class="h5-des text--bold">ddes/headline/h5-bold</p>
+			<p class="h5-mob text--bold">dmob/headline/h5-bold</p>
 		</div>
 		
-	    <h2 class="demo-secondary-header font-weight-bold">Body display</h2>
+	    <h2 class="demo-secondary-header text--bold">Body display</h2>
 		<div class="demo-typo--single">
 		    <p class="body-lg--light">body/body-large-light</p>
 		    <p class="body-lg--regular">body/body-large-regular</p>
@@ -49,7 +50,7 @@ export default function () {
 		    <p class="body-sm--semiBold">body/body-small-semibold</p>
         </div>
         
-        <h2 class="demo-secondary-header font-weight-bold">Editorial display</h2>
+        <h2 class="demo-secondary-header text--bold">Editorial display</h2>
         <div class="demo-typo--single">
             <p class="editorial--intro-copy">ddes/editorial/intro-copy</p>
             <p class="editorial--body-copy">ddes/editorial/body-copy</p>
@@ -57,13 +58,13 @@ export default function () {
             <p class="editorial--attribution">ddes/editorial/attribution</p>
         </div>
         
-        <h2 class="demo-secondary-header font-weight-bold">Form display</h2>
+        <h2 class="demo-secondary-header text--bold">Form display</h2>
         <div class="demo-typo--single">
             <p class="input-label">forms/input-label</p>
             <p class="input-error">forms/input-error</p>
         </div>
         
-        <h2 class="demo-secondary-header font-weight-bold">Others display</h2>
+        <h2 class="demo-secondary-header text--bold">Others display</h2>
         <div class="demo-typo--single">
             <p class="typo-nav-1st-level">ddes/others/nav-1st-level</p>
             <p class="typo-primary-link">ddes/others/primary-link</p>
@@ -82,9 +83,9 @@ export default function () {
 
     innerHTML += `</div>`;
 
-    demoColor.innerHTML = innerHTML;
+    demoTypo.innerHTML = innerHTML;
 
     // Render
     container.innerHTML = '<h1 style="padding-bottom: 20px">Demo Typography</h1>';
-    container.appendChild(demoColor);
+    container.appendChild(demoTypo);
 }

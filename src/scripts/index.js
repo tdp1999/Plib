@@ -1,10 +1,18 @@
 import color from './color';
 import typo from './typo';
+import boxShadow from './box-shadow';
+import gridSystem from './grid-system';
+import pagination from "./pagination";
+import loader from "./loader";
 
 (function () {
 	const pages = {
 		color,
 		typo,
+		boxShadow,
+		gridSystem,
+		pagination,
+		loader
 	};
 
 	window.addEventListener('load', () => {

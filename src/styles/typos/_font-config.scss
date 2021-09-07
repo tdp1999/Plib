@@ -179,6 +179,12 @@ $others-font-sizes: (
 
 
 /* Font weight config */
-.font-weight-bold {
-  font-weight: var(--font-weight-bold);
+.text--light { font-weight: var(--font-weight-light) }
+.text--regular { font-weight: var(--font-weight-regular) }
+.text--semiBold { font-weight: var(--font-weight-semiBold) }
+.text--bold { font-weight: var(--font-weight-bold); }
+
+/* Other font configs */
+.text-strike-through {
+  text-decoration: line-through;
 }
