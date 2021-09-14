@@ -8,9 +8,9 @@ export default function () {
 
     innerHTML += `
         <div class="demo-divider">
-            <div class="divider-hort"></div>
+            <div class="divider-hort w-50 w-lg-100"></div>
             <div style="margin-bottom: 10px"></div>
-            <div class="divider-vert"></div>
+<!--            <div class="divider-vert"></div>-->
         </div>
    `;
 

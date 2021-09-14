@@ -1,0 +1,46 @@
+// stylelint-disable indentation
+
+// Utilities
+
+$utilities: () !default;
+
+$utilities: map-merge(
+                (
+                        "align": (
+                                property: vertical-align,
+                                values: baseline top middle bottom text-bottom text-top
+                        ),
+                        // Sizing utilities
+                        "width": (
+                                property: width,
+                                class: w,
+                                responsive: true,
+                                values: (
+                                        25: 25%,
+                                        50: 50%,
+                                        75: 75%,
+                                        100: 100%,
+                                        auto: auto
+                                )
+                        ),
+                ),
+                $utilities
+);
+
+// Loop over each breakpoint
+@each $breakpoint in map-keys($grid-breakpoints) {
+
+  // Generate media query if needed
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    // Loop over each utility property
+    @each $key, $utility in $utilities {
+      // The utility can be disabled with `false`, thus check if the utility is a map first
+      // Only proceed if responsive media queries are enabled or if it's the base media query
+      @if type-of($utility) == "map" and (map-get($utility, responsive) or $infix == "") {
+        @include generate-utility($utility, $infix);
+      }
+    }
+  }
+}
