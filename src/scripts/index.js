@@ -4,6 +4,7 @@ import boxShadow from './box-shadow';
 import gridSystem from './grid-system';
 import pagination from "./pagination";
 import loader from "./loader";
+import divider from "./divider";
 
 (function () {
 	const pages = {
@@ -12,7 +13,8 @@ import loader from "./loader";
 		boxShadow,
 		gridSystem,
 		pagination,
-		loader
+		loader,
+		divider
 	};
 
 	window.addEventListener('load', () => {

@@ -1,0 +1,12 @@
+.divider {
+  &-hort {
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-blue-gray);
+  }
+  &-vert {
+    width: 1px;
+    height: 100%;
+    background-color: var(--color-blue-gray);
+  }
+}

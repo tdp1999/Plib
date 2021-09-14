@@ -1,7 +1,23 @@
-%spinner-common {
+@mixin loader-content(
+  $width: 78px,
+  $height: 78px,
+  $margin-x: 32px,
+  $margin-y: 32px,
+  $url: url("images/spinner/spinner-md.png"),
+) {
+  width: $width;
+  height: $height;
+  margin: $margin-y $margin-x;
+  background-image: $url;
   background-position: center;
   background-repeat: no-repeat;
   animation: spinner 2.5s linear infinite;
+}
+
+@mixin spinner($bg: var(--color-white), $border-radius: 8px, $shadow: 0 15px 30px rgba(0, 0, 0, 0.05)){
+  box-shadow: $shadow;
+  background-color: $bg;
+  border-radius: $border-radius;
 }
 
 @keyframes spinner {
@@ -14,25 +30,25 @@
 }
 
 .loader {
-  background-color: var(--color-white);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
   height: 100%;
-
-  &-spinner {
-    width: 78px;
-    height: 78px;
-    margin: 32px;
-    background-image: url("images/spinner/spinner-md.png");
-    @extend %spinner-common;
+  &-spinner--md {
+    @include spinner();
+    .loader-content {
+      @include loader-content();
+    }
   }
 
   &-spinner--lg {
-    width: 80px;
-    height: 80px;
-    margin: 40px;
-    background-image: url("images/spinner/spinner-lg.png");
-    @extend %spinner-common;
+    @include spinner();
+    .loader-content {
+      @include loader-content(80px, 80px, 40px, 40px, url("images/spinner/spinner-lg.png"));
+    }
+  }
+
+  &-spinner--oval {
+    @include spinner(var(--color-red), 100px, none);
+    .loader-content {
+      @include loader-content(32.77px, 29px, 32px, 12px, url("images/spinner/spinner-oval.png"));
+    }
   }
 }
-

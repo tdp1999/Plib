@@ -1,16 +1,23 @@
 @mixin color-variables($color-configs: $colors) {
-	@each $color-name, $color-hex in $colors {
+	@each $color-name, $color-hex in $color-configs {
 		--color-#{$color-name}: #{$color-hex};
 	}
 }
 
 @mixin font-weight-variable($font-weight-config: $plib-font-weight){
-	@each $name, $value in $plib-font-weight {
+	@each $name, $value in $font-weight-config {
 		--font-weight-#{$name}: #{$value};
+	}
+}
+
+@mixin spacer-variables($spacer-configs: $spacers) {
+	@each $spacer-name, $spacer-value in $spacer-configs {
+		--spacer-#{$spacer-name}: #{$spacer-value};
 	}
 }
 
 :root {
 	@include color-variables();
 	@include font-weight-variable();
+	@include spacer-variables();
 }

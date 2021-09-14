@@ -44,7 +44,6 @@ body {
 /*********************************************/
 /******* Typography & All kind of tags *******/
 /*********************************************/
-
 // 1. Remove top margins from headings
 //    By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
 //    margin for easier control within type scales as it avoids margin collapsing.
@@ -65,4 +64,44 @@ p {
 
 b, strong {
 	font-weight: $font-weight-bold;
+}
+
+
+/*********************************************/
+/****** Native Setup & Element (Webkit) ******/
+/*********************************************/
+
+// Scrollbar
+@media (min-width: 992px) {
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	::-webkit-scrollbar:horizontal {
+		height: 8px;
+	}
+
+	::-webkit-scrollbar-track, ::-webkit-scrollbar-track:horizontal {
+		background: rgba(0, 0, 0, 0.02);
+		box-shadow: inset 0 0.5px 0 rgba(0, 0, 0, 0.07),
+					inset 0 1px 0 rgba(0, 0, 0, 0.02),
+					inset 0 -1px 0 rgba(0, 0, 0, 0.02),
+					inset 0 -0.5px 0 rgba(0, 0, 0, 0.07);
+	}
+
+	::-webkit-scrollbar-thumb,
+	::-webkit-scrollbar-thumb:horizontal {
+		background: rgba(0, 0, 0, 0.4);
+		border-radius: 999px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.02);
+	}
+}
+
+// Firefox Scrollbar
+* {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.02);
 }

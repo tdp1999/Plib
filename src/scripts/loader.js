@@ -7,13 +7,11 @@ export default function () {
     let innerHTML = ``;
 
     innerHTML += `
-
-    <!--Wrong way! Do it again: inside just loader-content-->
-      <div class="demo-loader">
-        <div class="loader"><div class="loader-spinner"></div></div>
-        <div class="loader"><div class="loader-spinner--lg"></div></div>
-        <div class="loader"><div class="loader-spinner--oval"></div></div>
-      </div>
+        <div class="demo-loader">
+            <div class="loader loader-spinner--lg"><div class="loader-content"></div></div>
+            <div class="loader loader-spinner--md"><div class="loader-content"></div></div>
+            <div class="loader loader-spinner--oval"><div class="loader-content"></div></div>
+        </div>
    `;
 
     innerHTML += `</div>`;
