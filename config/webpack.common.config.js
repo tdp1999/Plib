@@ -16,7 +16,7 @@ module.exports = {
 		// filename: '[name].js',
 	},
 	devServer: {
-		contentBase: 'dist',
+		watchFiles: 'dist/*',
 	},
 	module: {
 		rules: [

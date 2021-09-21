@@ -1,3 +1,4 @@
+import home from './home';
 import color from './color';
 import typo from './typo';
 import boxShadow from './box-shadow';
@@ -8,13 +9,14 @@ import divider from "./divider";
 
 (function () {
 	const pages = {
+		home,
 		color,
 		typo,
 		boxShadow,
 		gridSystem,
 		pagination,
 		loader,
-		divider
+		divider,
 	};
 
 	window.addEventListener('load', () => {
@@ -41,10 +43,12 @@ import divider from "./divider";
 
 	function loadDemo() {
 		const hash = window.location.hash.slice(1);
+		if (hash === '') pages['home']();
+
 		const pageArray = Object.keys(pages);
 		const hashExist = pageArray.includes(hash);
 
 		if (hashExist) pages[hash]();
-		else alert("nothing's here!");
+		else pages['home']();
 	}
 })();

@@ -23,6 +23,28 @@ body {
   color: var(--color-red);
 }
 
+/* Home */
+.home-table {
+  width: 100%;
+  border-collapse: collapse;
+  tr {
+    box-shadow: 0 0 1px rgba(0,0,0,0.8);
+  }
+  td {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+  .section-divide {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .sub-section-divide {
+    text-align: center;
+    padding: 5px 0;
+  }
+}
+
 /* Color */
 .demo-color-panel {
   width: 100%;
