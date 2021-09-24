@@ -14,26 +14,44 @@ export default function () {
             <tr><td>Effect              </td><td class="text--bold">Finish</td></tr>
             <tr><td>Grid                </td><td>Partial Finish*</td></tr>
             <tr><td>Typo (Font Class)   </td><td class="text--bold">Finish</td></tr>
+            <tr><td>Spacing Variable    </td><td class="text--bold">Finish</td></tr>
             <tr><th class="body-md--semiBold section-divide" colspan="2">Utility 
                 <br>
                <span class="body-sm--regular">Possible status: Not begin, On Progress, Partial Finish, Finish, Configured differently, Skip</span>    
             </th></tr>
-            <tr><td>Display         </td><td>Not begin</td></tr>
-            <tr><td>Flex            </td><td>Not begin</td></tr>
-            <tr><td>Float           </td><td>Not begin</td></tr>
+            <tr><td>Display         </td><td class="text--bold">Finish</td></tr>
+            
+            <tr><th class="sub-section-divide" colspan="2">Flex</th></tr>
+            <tr><td>Flex                 </td><td class="text--bold">Finish</td></tr>
+            <tr><td>Flex direction       </td><td class="text--bold">Finish</td></tr>
+            <tr><td>Flex grow, shrink    </td><td class="text--bold">Finish</td></tr>
+            <tr><td>Flex wrap            </td><td class="text--bold">Finish</td></tr>
+            <tr><td>Justify, align*      </td><td class="text--bold">Finish</td></tr>
+            <tr><td>Order               </td><td class="text--bold">Finish</td></tr>
+            <tr><td>Gap                  </td><td class="text--disabled">Skip</td></tr>
+            <tr><th class="sub-section-divide" colspan="2">...</th></tr>
+            
+            <tr><td>Float           </td><td class="text--disabled">Skip</td></tr>
             <tr><td>Interaction     </td><td>Not begin</td></tr>
             <tr><td>Opacity         </td><td>Not begin</td></tr>
             <tr><td>Overflow        </td><td>Not begin</td></tr>
             <tr><td>Shadow          </td><td>Configured differently</td></tr>
             <tr><td>Sizing          </td><td>Partial Finish*</td></tr>
-            <tr><td>Spacing         </td><td>Not begin</td></tr>
+            
+            <tr><th class="sub-section-divide" colspan="2">Spacing</th></tr>
+            <tr><td>Margin         </td><td class="text--bold">Finish</td></tr>
+            <tr><td>Negative Margin         </td><td class="text--disabled">Skip</td></tr>
+            <tr><td>Padding         </td><td class="text--bold">Finish</td></tr>
+            <tr><th class="sub-section-divide" colspan="2">...</th></tr>
+            
             <tr><th class="sub-section-divide" colspan="2">Text</th></tr>
-            <tr><td>Text alignment  </td><td>Not begin</td></tr>
+            <tr><td>Text alignment  </td><td class="text--bold">Finish</td></tr>
             <tr><td>Text wrapping   </td><td>Not begin</td></tr>
             <tr><td>Word break      </td><td>Not begin</td></tr>
             <tr><td>Font size, line height, font weight, font italic </td><td>Configured differently</td></tr>
             <tr><td>Text transform  </td><td>Not begin</td></tr>
             <tr><th class="sub-section-divide" colspan="2">...</th></tr>
+            
             <tr><td>Vertical align  </td><td class="text--bold">Finish</td></tr>
             <tr><td>Visibility      </td><td>Not begin</td></tr>
 
@@ -42,7 +60,14 @@ export default function () {
                <span class="body-sm--regular">Possible status: Not begin, On Progress, Partial Finish, Finish, Configured differently, Skip</span> 
             </th></tr>
             <tr><td>Accordion       </td><td>Not begin</td></tr>
-            <tr><td>Button          </td><td>Not begin</td></tr>
+            
+            <tr><th class="sub-section-divide" colspan="2">Button</th></tr>
+            <tr><td>Buttons         </td><td>On Progress</td></tr>
+            <tr><td>Links           </td><td>Not begin</td></tr>
+            <tr><td>Facet           </td><td>Not begin</td></tr>
+            <tr><td>Eyebrow         </td><td>Not begin</td></tr>
+            <tr><th class="sub-section-divide" colspan="2">...</th></tr>
+            
             <tr><td>Card            </td><td>Not begin</td></tr>
             <tr><td>Comment         </td><td>Not begin</td></tr>
             <tr><td>Divider         </td><td class="text--bold">Finish</td></tr>

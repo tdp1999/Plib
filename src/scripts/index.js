@@ -6,6 +6,7 @@ import gridSystem from './grid-system';
 import pagination from "./pagination";
 import loader from "./loader";
 import divider from "./divider";
+import button from './buttons/index';
 
 (function () {
 	const pages = {
@@ -17,6 +18,7 @@ import divider from "./divider";
 		pagination,
 		loader,
 		divider,
+		button
 	};
 
 	window.addEventListener('load', () => {

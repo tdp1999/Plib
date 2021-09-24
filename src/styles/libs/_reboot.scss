@@ -105,3 +105,85 @@ b, strong {
 	scrollbar-width: thin;
 	scrollbar-color: rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.02);
 }
+
+/*******************/
+/****** Forms ******/
+/*******************/
+
+// 1. Allow labels to use `margin` for spacing.
+label {
+	display: inline-block; // 1
+}
+
+// Remove the default `border-radius` that macOS Chrome adds.
+// See https://github.com/twbs/bootstrap/issues/24093
+button {
+	border-radius: 0;
+}
+
+// Explicitly remove focus outline in Chromium when it shouldn't be
+// visible (e.g. as result of mouse click or touch tap). It already
+// should be doing this automatically, but seems to currently be
+// confused and applies its very visible two-tone outline anyway.
+button:focus:not(:focus-visible) {
+	outline: 0;
+}
+
+// 1. Remove the margin in Firefox and Safari
+input,
+button,
+select,
+optgroup,
+textarea {
+	margin: 0; // 1
+	font-family: inherit;
+	//@include font-size(inherit);
+	line-height: inherit;
+}
+
+// Remove the inheritance of text transform in Firefox
+button,
+select {
+	text-transform: none;
+}
+
+// Set the cursor for non-`<button>` buttons
+//
+// Details at https://github.com/twbs/bootstrap/pull/30562
+[role="button"] {
+	cursor: pointer;
+}
+
+select {
+	// Remove the inheritance of word-wrap in Safari.
+	// See https://github.com/twbs/bootstrap/issues/24990
+	word-wrap: normal;
+
+	// Undo the opacity change from Chrome
+	&:disabled {
+		opacity: 1;
+	}
+}
+
+// Remove the dropdown arrow in Chrome from inputs built with datalists.
+// See https://stackoverflow.com/a/54997118
+[list]::-webkit-calendar-picker-indicator {
+	display: none;
+}
+
+// 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+//    controls in Android 4.
+// 2. Correct the inability to style clickable types in iOS and Safari.
+// 3. Opinionated: add "hand" cursor to non-disabled button elements.
+button,
+[type="button"], // 1
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button; // 2
+
+	@if $enable-button-pointers {
+		&:not(:disabled) {
+			cursor: pointer; // 3
+		}
+	}
+}
