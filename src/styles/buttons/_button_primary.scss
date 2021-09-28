@@ -1,0 +1,12 @@
+$class-name: '.button-primary';
+
+#{$class-name} {
+  width: 100%;
+  color: var(--color-white);
+  background: var(--color-red);
+  border-radius: var(--spacer-25);
+  @extend .body-lg--semiBold;
+
+  padding-top: var(--spacer-3);
+  padding-bottom: var(--spacer-3);
+}

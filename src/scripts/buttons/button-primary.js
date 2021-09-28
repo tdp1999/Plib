@@ -16,7 +16,7 @@ export default function () {
 
     demoButtons.innerHTML = `
         <div>
-            <button>Button Primary Flat LG</button>
+            <button class="button button-primary">Button Primary Flat LG</button>
         </div>
     `;
 
