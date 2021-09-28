@@ -2,6 +2,7 @@
 
 $box-shadows: (
                 ('card', 0px 15px 30px rgba(0, 0, 0, 0.05), 0px 15px 30px rgba(0, 0, 0, 0.15)),
+                ('card-form-hover', null, 0px 15px 30px rgba(0, 0, 0, 0.15)),
                 ('form', 0px 26px 30px rgba(0, 0, 0, 0.05), 0px 15px 30px rgba(0, 0, 0, 0.15)),
                 ('form-sm', 0px 5px 10px rgba(0, 0, 0, 0.05), 0px 10px 25px rgba(0, 0, 0, 0.1)),
                 ('fab', 0px 10px 25px rgba(0, 0, 0, 0.13), 0px 20px 70px rgba(0, 0, 0, 0.25)),
@@ -11,10 +12,12 @@ $box-shadows: (
 
 @each $name, $shadow-normal, $shadow-hover in $box-shadows {
   %elevation--#{$name} {
-    box-shadow: $shadow-normal;
     transition: box-shadow 0.35s ease-in-out;
+    @if $shadow-normal != null {
+      box-shadow: $shadow-normal;
+    }
     @if $shadow-hover != null {
-      &:hover {
+      &:not(:disabled):hover {
         box-shadow: $shadow-hover;
       }
     }
