@@ -1,0 +1,39 @@
+$main-color:  var(--color-red);
+$shade-main-color: var(--color-black-20);
+$optional-color: var(--color-white);
+$shade-optional-color: var(--color-white-20);
+
+.eyebrow {
+  @extend .typo-eyebrow;
+  display: inline-block;
+  position: relative;
+  border-bottom: 2px solid $shade-main-color;
+  padding: 0;
+  &::after {
+    position: absolute;
+    width: 0;
+    content: '';
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: $main-color;
+    transition: width 0.35s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &--sm {
+    @extend .typo-eyebrow-small;
+  }
+
+  &--white {
+    color: $optional-color;
+    border-bottom-color: $shade-optional-color;
+    &::after {
+      background: $optional-color;
+    }
+  }
+}

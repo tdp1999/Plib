@@ -19,7 +19,7 @@ module.exports = {
 		static: {
 			directory: path.join(__dirname, '../dist'),
 		},
-		compress: true,
+		// compress: true,
 	},
 	optimization: {
 		runtimeChunk: 'single'

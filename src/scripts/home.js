@@ -61,11 +61,11 @@ export default function () {
             </th></tr>
             <tr><td>Accordion       </td><td>Not begin</td></tr>
             
-            <tr><th class="sub-section-divide" colspan="2">Button</th></tr>
+            <tr><th class="sub-section-divide" colspan="2"><a href="#button">Button</a></th></tr>
             <tr><td>Buttons         </td><td>On Progress</td></tr>
-            <tr><td>Links           </td><td>Not begin</td></tr>
+            <tr><td>Links           </td><td class="text--bold">Finish</td></tr>
             <tr><td>Facet           </td><td>Not begin</td></tr>
-            <tr><td>Eyebrow         </td><td>Not begin</td></tr>
+            <tr><td>Eyebrow         </td><td class="text--bold">Finish</td></tr>
             <tr><th class="sub-section-divide" colspan="2">...</th></tr>
             
             <tr><td>Card            </td><td>Not begin</td></tr>

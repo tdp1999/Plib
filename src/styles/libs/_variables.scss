@@ -182,6 +182,23 @@ $body-bg:                   $white !default;
 $body-color:                $black !default;
 $body-text-align:           left !default;
 
+/**************************/
+/********** Link **********/
+/**************************/
+//
+// Style anchor elements.
+
+$link-color:                              $black !default;
+$link-decoration:                         none !default;
+$link-hover-color:                        $black !default;
+$link-hover-decoration:                   null !default;
+
+/* Auto change hover color base on link color. I dont need that yet */
+/*$link-shade-percentage:                   20% !default;
+$link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;*/
+
+$stretched-link-pseudo-element:           after !default;
+$stretched-link-z-index:                  1 !default;
 
 /**************************/
 /******** Paragraphs ******/

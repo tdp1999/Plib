@@ -3,16 +3,32 @@
 
 [class^='icon-'],
 [class*=' icon-'] {
-	/* use !important to prevent issues with browser extensions that change fonts */
-	font-family: 'plib' !important;
-	speak: never;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'plib' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
 
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  // for width ~= height, not exactly equal.
+  line-height: 1;
+
+  // for i behave normally (width == height)
+  display: inline-block;
+
+  // for animation on icon
+  width: 1em;
+  height: 1em;
+
+  &::before, &::after {
+    width: 1em;
+    height: 1em;
+    background-size: contain;
+    display: inline-block;
+  }
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

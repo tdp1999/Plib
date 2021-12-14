@@ -6,13 +6,15 @@ export default function () {
 
     const demoButtons = document.createElement('div');
 
-    /*Road: Button primary:
-    Responsive: desktop, mobile, desktop-mono -> mono subclass => done
-    Size: lg, sm -> subclass => done
-    State: hover, enable, disable -> css state => done
-    Style: flat, outline -> subclass
-    Color: red, white -> override class => done
-    Has-icon: yes, no*/
+    /* Road:
+        Button primary:
+        Responsive: desktop, mobile, desktop-mono -> mono subclass => done
+        Size: lg, sm -> subclass => done
+        State: hover, enable, disable -> css state => done
+        Style: flat, outline -> subclass => done
+        Color: red, white -> override class => done
+        Has-icon: yes, no => done
+    */
 
     demoButtons.innerHTML = `
         <div style="background-color: grey">

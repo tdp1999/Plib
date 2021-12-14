@@ -152,14 +152,14 @@ $body-font-sizes: (
 /* Others config */
 $others-font-sizes: (
                 ('nav-1st-level', 'regular', 2.2, 3.2, 2.0, 2.724, false),
-                ('primary-link', 'semiBold', 2.0, 3.2, 1.6, 2.6, false),
+                ('primary-link', 'semiBold', 2.0, 2.8, 1.8, 2.6, false),
                 ('eyebrow', 'bold', 2.0, 3.2, 1.6, 2.6, false),
-                ('eyebrow-small', 'semiBold', 1.4, 2.4, 1.2, 1.8, false),
+                ('eyebrow-small', 'semiBold', 1.4, 2.4, 0, 0, true),
                 ('utility', 'bold', 1.4, 2.0, true),
                 ('label', 'bold', 1.4, 2.4, 0, 0, true),
                 ('label--sm', 'bold', 1.2, 2.2, 0, 0, true),
                 ('footer-link', 'semiBold', 1.2, 1.6, 0, 0, true),
-                ('tag', 'semiBold', 1.5, 1.6, true),
+                ('tag', 'semiBold', 1.4, 1.6, true),
                 ('disclaimer', 'regular', 1.1, 1.6, 0, 0, true)
 );
 
